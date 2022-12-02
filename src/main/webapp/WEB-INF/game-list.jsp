@@ -10,6 +10,8 @@
 </head>
 <body>
 
+<jsp:include page="header.jsp"></jsp:include>
+
 <h1>Games</h1>
 
 <table class="table table-striped">

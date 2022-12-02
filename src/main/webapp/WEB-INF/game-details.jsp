@@ -4,6 +4,9 @@
     <title>Title</title>
 </head>
 <body>
+
+<jsp:include page="header.jsp"></jsp:include>
+
 <h1>Détails du jeu</h1>
 
 <h2>${game.name}</h2>

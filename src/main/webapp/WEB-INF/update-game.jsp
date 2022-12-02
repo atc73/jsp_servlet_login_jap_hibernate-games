@@ -6,6 +6,8 @@
 </head>
 <body>
 
+<jsp:include page="header.jsp"></jsp:include>
+
 <h1>Update game</h1>
 <form method="post" action="/games/update">
   <label for="gameName">Name :</label>
