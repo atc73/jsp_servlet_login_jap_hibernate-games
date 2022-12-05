@@ -12,6 +12,8 @@
 
 <jsp:include page="header.jsp"></jsp:include>
 
+<p>Nb Login Hit : ${applicationScope['nbLoginHit']}</p>
+
 <h1>Games</h1>
 
 <table class="table table-striped">
