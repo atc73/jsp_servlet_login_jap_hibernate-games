@@ -27,7 +27,7 @@ public class DeleteGameServlet extends HttpServlet {
         try {
             Long id = Long.parseLong(idStr);
             GameDao dao = new GameDao();
-            Optional<Game> game = dao.get(id);
+            Optional<Game> game = dao.findById(id);
 
             if (game.isPresent()) {
                 dao.delete(game.get());

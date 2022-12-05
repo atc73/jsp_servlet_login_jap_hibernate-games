@@ -19,7 +19,7 @@ public class GameDetailsServlet extends HttpServlet {
         try {
             Long id = Long.parseLong(req.getParameter("id"));
             GameDao dao = new GameDao();
-            Optional<Game> game = dao.get(id);
+            Optional<Game> game = dao.findById(id);
 
             if (game.isPresent()) {
                 req.setAttribute("game", game.get());

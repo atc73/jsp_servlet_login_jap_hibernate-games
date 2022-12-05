@@ -25,6 +25,7 @@ public class AddGameServlet extends HttpServlet {
 
         Game game = new Game(name, description);
         GameDao gameDao = new GameDao();
+        System.out.println(game);
         gameDao.save(game);
 
         resp.sendRedirect(request.getContextPath() + "/games");

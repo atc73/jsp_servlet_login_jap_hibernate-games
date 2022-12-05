@@ -1,12 +1,22 @@
 package com.example.demo.model;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "game")
 public class Game {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String name;
 
     private String description;
+
+    public Game() {
+
+    }
 
     public Game(Long id, String name, String description) {
         this.id = id;
@@ -18,6 +28,7 @@ public class Game {
         this.name = name;
         this.description = description;
     }
+
 
     public Long getId() {
         return id;
@@ -41,5 +52,14 @@ public class Game {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    @Override
+    public String toString() {
+        return "Game{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                '}';
     }
 }

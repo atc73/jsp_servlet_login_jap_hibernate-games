@@ -21,7 +21,8 @@ public class UpdateGameServlet extends HttpServlet {
             Long id = Long.parseLong(idGame);
             System.out.println(id);
             GameDao dao = new GameDao();
-            Optional<Game> game = dao.get(id);
+            Optional<Game> game = dao.findById(id);
+            System.out.println(game.toString());
 
             if (game.isPresent()) {
                 req.setAttribute("game", game.get());

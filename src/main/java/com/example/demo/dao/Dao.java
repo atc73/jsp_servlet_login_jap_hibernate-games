@@ -5,9 +5,9 @@ import java.util.Optional;
 
 public interface Dao<T> {
 
-    Optional<T> get(Long id);
-
     List<T> getAll();
+
+    Optional<T> findById(Long id);
 
     void save(T t);
 
